@@ -83,3 +83,7 @@ Type 'help' to see list of available commands.
 
 `;
 };
+
+export const host = async (args: string[]): Promise<string> => {
+  return window ? window.location.hostname : 'localhost';
+};

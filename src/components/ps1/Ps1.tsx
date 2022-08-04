@@ -28,11 +28,12 @@ export const Ps1 = () => {
         @
       </span>
       <span
+        className={hostname.length >= 16 ? 'truncate' : ''}
         style={{
           color: theme.green,
         }}
       >
-        {hostname}
+        {hostname.slice(0, 16)}
       </span>
       <span
         style={{
