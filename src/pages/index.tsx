@@ -1,4 +1,3 @@
-import { useMatomo } from '@m4tt72/matomo-tracker-react';
 import Head from 'next/head';
 import React from 'react';
 import { History } from '../components/history';
@@ -12,15 +11,10 @@ interface IndexPageProps {
 }
 
 const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
-  const { trackPageView } = useMatomo();
   const { history } = useShell();
   const { theme } = useTheme();
 
   const containerRef = React.useRef(null);
-
-  React.useEffect(() => {
-    trackPageView({});
-  }, []);
 
   React.useEffect(() => {
     if (inputRef.current) {
@@ -31,13 +25,13 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
   return (
     <>
       <Head>
-        <title>M4TT72 | Home</title>
+        <title>Aravindha aka T3cH_W1z4rD</title>
       </Head>
 
       <div
         className="overflow-hidden h-full rounded"
         style={{
-          borderColor: theme.yellow,
+          borderColor: theme.brightGreen,
           padding: config.border ? 16 : 8,
           borderWidth: config.border ? 2 : 0,
         }}

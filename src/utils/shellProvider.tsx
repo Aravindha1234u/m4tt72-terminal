@@ -70,12 +70,12 @@ export const ShellProvider: React.FC<ShellProviderProps> = ({ children }) => {
     const [cmd, ...args] = command.split(' ').slice(1);
 
     switch (cmd) {
-      case 'theme':
-        const output = await bin.theme(args, setTheme);
+      // case 'theme':
+      //   const output = await bin.theme(args, setTheme);
 
-        setHistory(output);
+      //   setHistory(output);
 
-        break;
+      //   break;
       case 'clear':
         clearHistory();
         break;
