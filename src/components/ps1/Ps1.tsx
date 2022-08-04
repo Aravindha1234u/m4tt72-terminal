@@ -15,14 +15,14 @@ export const Ps1 = () => {
     <div>
       <span
         style={{
-          color: theme.yellow,
+          color: theme.brightRed,
         }}
       >
         guest
       </span>
       <span
         style={{
-          color: theme.white,
+          color: theme.brightWhite,
         }}
       >
         @

@@ -13,6 +13,7 @@ interface IndexPageProps {
 const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
   const { history } = useShell();
   const { theme } = useTheme();
+  const [loader,setLoader] = React.useState(true);
 
   const containerRef = React.useRef(null);
 
@@ -21,6 +22,12 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
       inputRef.current.focus();
     }
   }, [history]);
+
+  React.useEffect(()=>{
+    setTimeout(()=>{
+      setLoader(false);
+    },2000);
+  },[]);
 
   return (
     <>
@@ -36,6 +43,14 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
           borderWidth: config.border ? 2 : 0,
         }}
       >
+        {loader && (
+          <div className="loader" style={{
+            padding: '5rem',
+          }}>
+            <div className="loader__element"></div>
+          </div>
+        )}
+        
         <div ref={containerRef} className="overflow-y-auto h-full">
           <History history={history} />
 
