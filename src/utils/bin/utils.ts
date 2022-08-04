@@ -67,6 +67,11 @@ export const sudo = async (args?: string[]): Promise<string> => {
 
 export const banner = (args?: string[]): string => {
   return `
+  <div class="flex w-full">
+    <img src="https://i.imgur.com/4dalpi3.png">
+  </div>
+  `;
+  return `
   ████████╗██████╗  ██████╗██╗  ██╗    ██╗    ██╗ ██╗███████╗██╗  ██╗██████╗ ██████╗ 
   ╚══██╔══╝╚════██╗██╔════╝██║  ██║    ██║    ██║███║╚══███╔╝██║  ██║██╔══██╗██╔══██╗
      ██║    █████╔╝██║     ███████║    ██║ █╗ ██║╚██║  ███╔╝ ███████║██████╔╝██║  ██║

@@ -72,9 +72,7 @@ export const ShellProvider: React.FC<ShellProviderProps> = ({ children }) => {
     switch (cmd) {
       // case 'theme':
       //   const output = await bin.theme(args, setTheme);
-
       //   setHistory(output);
-
       //   break;
       case 'clear':
         clearHistory();

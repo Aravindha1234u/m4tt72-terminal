@@ -11,7 +11,7 @@ const Layout: React.FC<Props> = ({ children, onClick }) => {
 
   return (
     <div
-      className="min-w-max text-xs md:min-w-full md:text-base"
+      className="w-full text-xs md:min-w-full md:text-base" // min-w-max
       onClick={onClick}
       style={{
         color: theme.foreground,
